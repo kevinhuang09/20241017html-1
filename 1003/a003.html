@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>測驗框架</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .quiz-container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+        .question {
+            display: none; /* 預設隱藏 */
+            margin-bottom: 20px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+        .next-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .next-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <!-- 第一題 -->
+    <div class="question" id="q1">
+        <h2>第 1 題: 請選擇正確的答案？</h2>
+        <ul class="options">
+            <li><input type="radio" name="q1" value="a"> 選項 A</li>
+            <li><input type="radio" name="q1" value="b"> 選項 B</li>
+            <li><input type="radio" name="q1" value="c"> 選項 C</li>
+            <li><input type="radio" name="q1" value="d"> 選項 D</li>
+        </ul>
+    </div>
+
+    <!-- 第二題 -->
+    <div class="question" id="q2">
+        <h2>第 2 題: 哪個選項正確？</h2>
+        <ul class="options">
+            <li><input type="radio" name="q2" value="a"> 選項 A</li>
+            <li><input type="radio" name="q2" value="b"> 選項 B</li>
+            <li><input type="radio" name="q2" value="c"> 選項 C</li>
+            <li><input type="radio" name="q2" value="d"> 選項 D</li>
+        </ul>
+    </div>
+
+    <!-- 第三題 -->
+    <div class="question" id="q3">
+        <h2>第 3 題: 這個選項是對的嗎？</h2>
+        <ul class="options">
+            <li><input type="radio" name="q3" value="a"> 選項 A</li>
+            <li><input type="radio" name="q3" value="b"> 選項 B</li>
+            <li><input type="radio" name="q3" value="c"> 選項 C</li>
+            <li><input type="radio" name="q3" value="d"> 選項 D</li>
+        </ul>
+    </div>
+
+    <!-- 下一題按鈕 -->
+    <button class="next-btn" onclick="showNextQuestion()">下一題</button>
+</div>
+
+<script>
+    let currentQuestion = 0;
+    const questions = document.querySelectorAll('.question');
+
+    // 顯示第一題
+    questions[currentQuestion].style.display = 'block';
+
+    // 顯示下一題的函數
+    function showNextQuestion() {
+        // 隱藏當前題目
+        questions[currentQuestion].style.display = 'none';
+
+        // 顯示下一題
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+            questions[currentQuestion].style.display = 'block';
+        } else {
+            alert("測驗已完成");
+        }
+    }
+</script>
+
+</body>
+</html>

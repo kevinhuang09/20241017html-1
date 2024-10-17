@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <body bgcolor = "yellow">
+        <font style = "font-size : 30px"><h1>測驗題目</h1></font>
+        <table border = 5 width = 600 height = auto>
+        
+            <tr>
+                <th style = "width : 120px"><h2>第一題 : </h2></th>
+                <td style = "width : 150px; font-size : 30px">下列哪一個是電阻？</td>
+                <!-- <td style="width: 100px">
+                    <a href="pro1.html" target="left-top">
+                        <img src="p005.jpg" width="100" height="100">
+                    </a>
+                    <a href="bad.html" target="right-top" style="display: none;"></a>
+                </td> -->
+                <td style = "width : 100px">
+                    <a href = "#" onclick = openWindows()><img src = "p005.jpg" width = 100px height = 100px></a>  
+                </td>
+                <td style = "width : 100px">
+                    <a href = "#" onclick = openWindows2()><img src = "p004.jpg" width = 100 height = 100></a>
+                </td>
+                <td style = "width : 100px">
+                    <a href = "#" onclick = openWindows()><img src = "p006.jpg" width = 100 height = 100></a>
+                </td>
+                <td style = "width : 100px">
+                    <a href = "#" onclick = openWindows()><img src = "p007.jpg" width = 100 height = 100></a>
+                </td>
+                <script>
+                    function openWindows() {
+                        window.open('bad.html', 'right-top');
+                        window.open('solution1.html', 'left-top');
+                    }
+                    function openWindows2() {
+                        window.open('correct.html', 'right-top');
+                        window.open('correct1.html', 'left-top');
+                    }
+                </script>
+                            </tr>
+            
+            <tr>
+                <th><h2>第二題 : </h2></th>
+                <td style = "font-size : 30px">下列哪一個是電容符號？</td>
+                <td><a href = "#" onclick = openWindowQ2_correct()><img src = "p008.png" width = 100 height = 100></a></td>
+                <td><a href = "#" onclick = openWindowQ2_incorrect()><img src = "p009.png" width = 100 height = 100></a></td>
+                <td><a href = "#" onclick = openWindowQ2_incorrect()><img src = "p010.png" width = 100 height = 100></a></td>
+                <td><a href = "#" onclick = openWindowQ2_incorrect()><img src = "p011.png" width = 100 height = 100></a></td>
+                <script>
+                    function openWindowQ2_incorrect() {
+                        window.open('bad.html', 'right-top');
+                        window.open('solution2.html', 'left-top');
+                    }
+                    function openWindowQ2_correct() {
+                        window.open('correct.html', 'right-top');
+                        window.open('correct1.html', 'left-top');
+                    }
+                </script>
+            </tr>
+    
+            <tr align = middle>
+                <th><h2>第三題 : </h2></th>
+                <td><img src = p013.jpg></td>
+                <td style = "font-size : 25px"><a href = "#" onclick = openWindowQ3_incorrect()>電瓶</a></td>
+                <td style = "font-size : 25px"><a href = "#" onclick = openWindowQ3_incorrect()>電阻</a></td>
+                <td style = "font-size : 25px"><a href = "#" onclick = openWindowQ3_correct()>二極體</a></td>
+                <td style = "font-size : 25px"><a href = "#" onclick = openWindowQ3_incorrect()>三極體</a></td>
+                <script>
+                    function openWindowQ3_correct() {
+                        window.open('correct.html', 'right-top');
+                        window.open('correct1.html', 'left-top');
+                    }
+                    function openWindowQ3_incorrect() {
+                        window.open('bad.html', 'right-top');
+                        window.open('solution3.html', 'left-top');
+                    }
+                </script>
+            </tr>
+            <tr align = middle>
+                <th><h2>第四題 : </h2></th>
+                <td><img src = "p015.png"></td>
+                <td style = "font-size : 30px"><a href = "#" onclick = openWindowQ4_incorrect()>且</a></td>
+                <td style = "font-size : 30px"><a href = "#" onclick = openWindowQ4_incorrect()>非</a></td>
+                <td style = "font-size : 30px"><a href = "#" onclick = openWindowQ4_incorrect()>和</a></td>
+                <td style = "font-size : 30px"><a href = "#" onclick = openWindowQ4_correct()>或</a></td>
+                <script>
+                    function openWindowQ4_correct() {
+                        window.open('correct.html', 'right-top');
+                        window.open('correct1.html', 'left-top');
+                    }
+                    function openWindowQ4_incorrect() {
+                        window.open('bad.html', 'right-top');
+                        window.open('solution4.html', 'left-top');
+                    }
+                </script>
+            </tr>
+            <tr align = middle>
+                <th><h2>第五題 : </h2></th>
+                <td><img src = "p014.png"></td>
+                <td><button style = "font-size : 25px" onclick = "setTimeout(() => alert('correct!!!'), 100); 
+                window.open('correct.html', 'right-top'); window.open('correct1.html', 'left-top')">NOR</button></td>
+                <td><button style = "font-size : 25px" onclick = "setTimeout(() => alert('incorrect'), 100);
+                window.open('bad.html', 'right-top'); window.open('solution5.html', 'left-top')">NAND</button></td>
+                <td><button style = "font-size : 25px" onclick = "setTimeout(() => alert('incorrect!!!'), 100);
+                window.open('bad.html', 'right-top');window.open('solution5.html', 'left-top')">OR</button></td>
+                <td><button style = "font-size : 25px" onclick = "setTimeout(() => alert('incorrect!!!'), 100);
+                window.open('bad.html', 'right-top');window.open('solution5.html', 'left-top')">NOT</button></td>
+            </tr>
+            <tr align = middle>
+                <th><h2>第六題 : </h2></th>
+                <td><img src = "p016.png"></td>
+                <td><button style = "font-size : 25px" onclick = "setTimeout(() => alert('incorrect!!!'), 100);
+                window.open('bad.html', 'right-top'); window.open('solution6.html', 'left-top')">NOR</button></td>
+                <td><button style = "font-size : 25px" onclick = "setTimeout(() => alert('correct'), 100);
+                window.open('correct.html', 'right-top');window.open('correct1.html', 'left-top')">NAND</button></td>
+                <td><button style = "font-size : 25px" onclick = "setTimeout(() => alert('incorrect!!!'), 100);
+                window.open('bad.html', 'right-top');window.open('solution6.html', 'left-top')">OR</button></td>
+                <td><button style = "font-size : 25px" onclick = "setTimeout(() => alert('incorrect!!!'), 100);
+                window.open('bad.html', 'right-top');window.open('solution6.html', 'left-top')">NOT</button></td>
+            </tr>
+        </table>
+    </body>   
+</html>

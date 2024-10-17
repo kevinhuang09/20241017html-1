@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        let name;
+        let score = 0;
+        name = window.prompt("Please input your name");
+        window.document.write(`<font color = pink size = 6><marquee behavior = alternate direction = right>Welcome ${name}</marquee></font> `)
+        function judge1(p, n) {
+            if(p == 1){
+                var ptr = window.document.getElementById('fb1');
+                let solution1 = window.document.getElementById('solution1');
+                if(n == 1){   
+                    solution1.style.display = "none";
+                }
+                if(n == 2){
+                    solution1.style.display = "block";
+                }
+            }
+            if(p == 2){
+                var ptr = window.document.getElementById('fb2');
+                let solution2 = window.document.getElementById('solution2');
+                if(n == 1){   
+                    solution2.style.display = "none";
+                }
+                if(n == 2){
+                    solution2.style.display = "block";
+                }
+            }
+            if(p == 3){
+                var ptr = window.document.getElementById('fb3');
+                let solution3 = window.document.getElementById('solution3');
+                if(n == 1){
+                    solution3.style.display = "none";
+                }
+                if(n == 2){
+                    solution3.style.display = "block";
+                }
+            }
+            if(p == 4){
+                var ptr = window.document.getElementById('fb4');
+                let solution4 = window.document.getElementById('solution4');
+                if(n == 1){   
+                    solution4.style.display = "none";
+                }
+                if(n == 2){
+                    solution4.style.display = "block";
+                }
+            }
+            if(p == 5){
+                var ptr = window.document.getElementById('fb5');
+                let solution5 = window.document.getElementById('solution5');
+                if(n == 1){   
+                    solution5.style.display = "none";
+                }
+                if(n == 2){
+                    solution5.style.display = "block";
+                }
+            }
+            if(p == 6){
+                var ptr = window.document.getElementById('fb6');
+                let solution6 = window.document.getElementById('solution6');
+                if(n == 1){
+                    solution6.style.display = "none";
+                }
+                if(n == 2){
+                    solution6.style.display = "block";
+                }
+            }
+            if(n == 1){
+                score += 10;
+                fb = "<img src = youcorrect.png width = 30px height = auto>correct!!! score : " + score;
+            }
+            if(n == 2){
+                score -= 10;
+                fb = "<img src = incorrect.png width = 30px height = auto>incorrect!!! score : " + score;
+                
+            }
+
+            ptr.innerHTML = fb;
+        }  
+        // function judge8() {
+        //     let ptr = window.document.getElementById('fb8');
+        //     let ans = window.document.getElementById('q8').value;
+        //     let solution8 = window.document.getElementById('solution8');
+        //     if(ans.toLowerCase() == "e"){
+        //         sc += 10;
+        //         fb = "<img src = youcorrect.png width = 30px height = auto>correct!!! score : " + score;
+        //         solution8.style.display = "none";
+        //     }
+        //     else{
+        //         sc -= 10;
+        //         fb = "<img src = incorrect.png width = 30px height = auto>incorrect!!! score : " + score;
+        //         solution8.style.display = "block";
+        //     }
+        //     ptr.innerHTML = fb;
+        // }
+    </script>
+    <body>
+        <h1>測驗題目</h1>
+        <table border = 1>
+            <tr>
+                <th>題目</th>
+                <th>錯題解析</th>
+            </tr>
+            <tr>
+                <td>1.哪一個是電壓的符號?
+                    <input type = button value = "V" onclick = "judge1(1, 1)">
+                    <input type = button value = "P" onclick = "judge1(1, 2)">
+                    <input type = button value = "G" onclick = "judge1(1, 2)">
+                    <input type = button value = "I" onclick = "judge1(1, 2)">
+                    <span id = "fb1"></span><br></td>
+                <td><ol id = "solution1" style = "display : none; ">
+                    <li>V : 電壓</li>
+                    <li>P : 電功率</li>
+                    <li>G : 電導</li>
+                    <li>I : 電流</li>
+                </ol></td>
+            </tr>
+            <tr>
+                <td>
+                    2.哪一個是電阻的符號?
+                    <input type = button value = "L" onclick = "judge1(2, 2)">
+                    <input type = button value = "C" onclick = "judge1(2, 2)">
+                    <input type = button value = "R" onclick = "judge1(2, 1)">
+                    <input type = button value = "Q" onclick = "judge1(2, 2)">
+                    <span id = "fb2"></span><br>
+                </td>
+                <td>
+                    <ol id = "solution2" style = "display : none; ">
+                        <li>L : 電感</li>
+                        <li>C : 電容</li>
+                        <li>R : 電阻</li>
+                        <li>Q : 庫倫</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    3.哪一個是電容的符號?
+        <input type = button value = "I" onclick = "judge1(3, 2)">
+        <input type = button value = "C" onclick = "judge1(3, 1)">
+        <input type = button value = "L" onclick = "judge1(3, 2)">
+        <input type = button value = "Q" onclick = "judge1(3, 2)">
+        <span id = "fb3"></span><br>
+                </td>
+                <td>
+                    <ol id = "solution3" style = "display : none; ">
+                        <li>I : 電流</li>
+                        <li>C : 電容</li>
+                        <li>L : 電感</li>
+                        <li>Q : 庫倫</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    4.哪一個是邏輯閘中且的符號?
+        <input type = button value = "OR" onclick = "judge1(4, 2)">
+        <input type = button value = "NAND" onclick = "judge1(4, 2)">
+        <input type = button value = "NOT" onclick = "judge1(4, 2)">
+        <input type = button value = "AND" onclick = "judge1(4, 1)">
+        <span id = "fb4"></span><br>
+                </td>
+                <td>
+                    <ol id = solution4 style = "display : none; ">
+                        <li>OR : 或</li>
+                        <li>NAND : 不全是即真</li>
+                        <li>NOT : 非</li>
+                        <li>AND : 和</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    5.哪一個是邏輯閘中或的符號?
+        <input type = button value = "OR" onclick = "judge1(5, 1)">
+        <input type = button value = "NAND" onclick = "judge1(5, 2)">
+        <input type = button value = "NOT" onclick = "judge1(5, 2)">
+        <input type = button value = "AND" onclick = "judge1(5, 2)">
+        <span id = "fb5"></span><br>
+                </td>
+                <td>
+                    <ol id = solution5 style = "display : none; ">
+                        <li>OR : 或</li>
+                        <li>NAND : 不全是即真</li>
+                        <li>NOT : 非</li>
+                        <li>AND : 和</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    6.哪一個是邏輯閘中非的符號?
+        <input type = button value = "OR" onclick = "judge1(6, 2)">
+        <input type = button value = "NAND" onclick = "judge1(6, 2)">
+        <input type = button value = "NOT" onclick = "judge1(6, 1)">
+        <input type = button value = "AND" onclick = "judge1(6, 2)">
+        <span id = "fb6"></span><br>
+                </td>
+                <td>
+                    <ol id = solution6 style = "display : none; ">
+                        <li>OR : 或</li>
+                        <li>NAND : 不全是即真</li>
+                        <li>NOT : 非</li>
+                        <li>AND : 和</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    7.電流英文縮寫?
+                    <input type = text id = "q7">
+                    <button onclick = judge7()>correct?</button>
+                    <span id = "fb7"></span> 
+                    <script>
+                        function judge7() {
+                            let ptr = window.document.getElementById('fb7');
+                            let ans = window.document.getElementById('q7').value;
+                            let solution7 = window.document.getElementById('solution7');
+                            if(ans.toLowerCase() == "i"){
+                                score += 10;
+                                fb = "<img src = youcorrect.png width = 30px height = auto>correct!!! score : " + score;
+                                solution7.style.display = "none";
+                            }
+                            else{
+                                score -= 10;
+                                fb = "<img src = incorrect.png width = 30px height = auto>incorrect!!! score : " + score;
+                                solution7.style.display = "block";
+                            }
+                            ptr.innerHTML = fb;
+                        }
+                    </script>
+                </td>
+                <td id = solution7 style = "display : none;">
+                    <p>電流的英文代號為I</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    8.電能英文縮寫?
+                    <input type = text id = "q8">
+                    <button onclick = judge8()>correct?</button>
+                    <span id = "fb8"></span>
+                    <script>
+                        function judge8() {
+                            let ptr = window.document.getElementById('fb8');
+                            let ans = window.document.getElementById('q8').value;
+                            let solution8 = window.document.getElementById('solution8');
+                            if(ans.toLowerCase() == "e"){
+                                score += 10;
+                                fb = "<img src = youcorrect.png width = 30px height = auto>correct!!! score : " + score;
+                                solution8.style.display = "none";
+                            }
+                            else{
+                                score -= 10;
+                                fb = "<img src = incorrect.png width = 30px height = auto>incorrect!!! score : " + score;
+                                solution8.style.display = "block";
+                            }
+                            ptr.innerHTML = fb;
+                        }
+                    </script>
+                </td>
+                <td id = solution8 style = "display : none;">
+                    <p>電流的英文代號為E</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    9. 1 ? 0 = 1 (填入or, and, not)(大小寫忽略)
+                    <input type = text id = "q9">
+                    <button onclick = judge9()>correct?</button>
+                    <span id = "fb9"></span>
+                    <script>
+                        function judge9() {
+                            let ptr = window.document.getElementById('fb9');
+                            let ans = window.document.getElementById('q9').value;
+                            let solution9 = window.document.getElementById('solution9');
+                            if(ans.toLowerCase() == "or"){
+                                score += 10;
+                                fb = "<img src = youcorrect.png width = 30px height = auto>correct!!! score : " + score;
+                                solution9.style.display = "none";
+                            }
+                            else{
+                                score -= 10;
+                                fb = "<img src = incorrect.png width = 30px height = auto>incorrect!!! score : " + score;
+                                solution9.style.display = "block";
+                            }
+                            ptr.innerHTML = fb;
+                        }
+                    </script>
+                </td>
+                <td id = solution9 style = "display : none;">
+                    <ul>
+                        <li>1 or 0 = 1</li>
+                        <li>1 and 0 = 0</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    10. 1 ? 0 = 0 (填入or, and, not)(大小寫忽略)
+                    <input type = text id = "q10">
+                    <button onclick = judge10()>correct?</button>
+                    <span id = "fb10"></span>
+                    <script>
+                        function judge10() {
+                            let ptr = window.document.getElementById('fb10');
+                            let ans = window.document.getElementById('q10').value;
+                            let solution9 = window.document.getElementById('solution10');
+                            if(ans.toLowerCase() == "and"){
+                                score += 10;
+                                fb = "<img src = youcorrect.png width = 30px height = auto>correct!!! score : " + score;
+                                solution10.style.display = "none";
+                            }
+                            else{
+                                score -= 10;
+                                fb = "<img src = incorrect.png width = 30px height = auto>incorrect!!! score : " + score;
+                                solution10.style.display = "block";
+                            }
+                            ptr.innerHTML = fb;
+                        }
+                    </script>
+                </td>
+                <td id = solution10 style = "display : none;">
+                    <ul>
+                        <li>1 or 0 = 1</li>
+                        <li>1 and 0 = 0</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <h3>參考資料 : 無</h3>
+    </body>
+</html>
